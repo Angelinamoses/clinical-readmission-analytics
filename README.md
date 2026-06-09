@@ -1,4 +1,4 @@
-\# Clinical Readmission Analytics
+# Clinical Readmission Analytics
 
 
 
@@ -6,7 +6,7 @@ A healthcare analytics project exploring hospital readmission patterns among dia
 
 
 
-\## Project Goal
+## Project Goal
 
 
 
@@ -14,47 +14,47 @@ This project investigates factors associated with hospital readmissions using re
 
 
 
-\## Skills Demonstrated
+## Skills Demonstrated
 
 
 
-\* Data Cleaning
+* Data Cleaning
 
-\* Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis (EDA)
 
-\* Healthcare Analytics
+* Healthcare Analytics
 
-\* Statistical Analysis
+* Statistical Analysis
 
-\* Data Visualization
+* Data Visualization
 
-\* Clinical Insight Generation
-
-
-
-\## Tech Stack
+* Clinical Insight Generation
 
 
 
-\* Python
-
-\* Pandas
-
-\* NumPy
-
-\* Plotly
-
-\* Seaborn
-
-\* SciPy
-
-\* Statsmodels
-
-\* Missingno
+## Tech Stack
 
 
 
-\## Project Structure
+* Python
+
+* Pandas
+
+* NumPy
+
+* Plotly
+
+* Seaborn
+
+* SciPy
+
+* Statsmodels
+
+* Missingno
+
+
+
+## Project Structure
 
 
 
@@ -62,7 +62,7 @@ Coming soon.
 
 
 
-\## Dataset
+## Dataset
 
 
 
@@ -70,7 +70,7 @@ Dataset selection and documentation will be added during project reconstruction.
 
 
 
-\## Status
+## Status
 
 
 
