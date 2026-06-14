@@ -192,7 +192,3 @@ Potential future extensions include:
 ## Author
 
 **Angelina Moses**
-
-Master's Student in Health Informatics
-
-Interested in Healthcare Analytics, Clinical Machine Learning, and Data-Driven Healthcare Innovation.
