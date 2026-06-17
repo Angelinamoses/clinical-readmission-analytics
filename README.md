@@ -397,7 +397,7 @@ https://github.com/Angelinamoses
 
 LinkedIn
 
-https://linkedin.com/in/angelinamoses
+www.linkedin.com/in/angel-darla-28511723b
 
 ---
 
