@@ -1,194 +1,408 @@
-# Clinical Readmission Analytics 🏥📊
+<div align="center">
 
-A healthcare analytics project investigating factors associated with hospital readmissions among diabetic patients using real-world hospital encounter data.
+# 🏥 Clinical Readmission Analytics
 
----
+### End-to-End Healthcare Data Analytics using the UCI Diabetes 130-US Hospitals Dataset
 
-## Project Overview
+An end-to-end healthcare analytics project that explores **hospital readmission patterns**, performs **clinical data preprocessing**, **exploratory data analysis**, **statistical testing**, and **data visualization**, while following reproducible software engineering practices with reusable Python utility modules and automated unit testing.
 
-Hospital readmissions are an important quality-of-care and cost-related challenge for healthcare systems. Understanding the factors associated with readmission can help healthcare organizations identify high-risk patients and improve post-discharge care strategies.
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![Pytest](https://img.shields.io/badge/Pytest-Unit%20Testing-brightgreen?logo=pytest)
+![Healthcare](https://img.shields.io/badge/Domain-Healthcare-red)
+![License](https://img.shields.io/badge/License-MIT-success)
 
-This project analyzes over 100,000 hospital encounters from diabetic patients to explore demographic, clinical, and healthcare utilization patterns associated with readmission outcomes.
-
-The analysis follows a complete healthcare analytics workflow including data acquisition, data cleaning, exploratory data analysis, statistical testing, and clinical interpretation.
-
----
-
-## Dataset
-
-**Source:** UCI Machine Learning Repository
-
-**Dataset:** Diabetes 130-US Hospitals for Years 1999–2008
-
-### Dataset Summary
-
-| Metric             | Value                 |
-| ------------------ | --------------------- |
-| Patient Encounters | 101,766               |
-| Hospitals          | 130                   |
-| Features           | 48                    |
-| Domain             | Healthcare / Diabetes |
-| Outcome Variable   | Readmission Status    |
-
-The dataset was accessed programmatically using the `ucimlrepo` package.
+</div>
 
 ---
 
-## Project Workflow
+# 📑 Table of Contents
 
-```text
-Data Acquisition
-        ↓
-Data Cleaning
-        ↓
-Exploratory Data Analysis
-        ↓
-Statistical Analysis
-        ↓
-Clinical Insights
-```
+- Project Overview
+- Dataset
+- Repository Structure
+- Project Workflow
+- Analysis Highlights
+- Statistical Analysis
+- Key Findings
+- Visualizations
+- Technologies Used
+- Installation
+- Running Tests
+- Clinical Relevance
+- Future Improvements
+- Author
 
 ---
 
-## Repository Structure
+# 🩺 Project Overview
+
+Hospital readmissions are widely recognized as an important quality indicator in healthcare systems. Identifying factors associated with patient readmissions can support hospitals in improving patient outcomes, optimizing healthcare resource utilization, and reducing avoidable costs.
+
+This repository demonstrates a complete healthcare analytics workflow using the **Diabetes 130-US Hospitals Dataset** from the **UCI Machine Learning Repository**.
+
+The project follows a reproducible analytical pipeline consisting of:
+
+- Data Acquisition
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Statistical Analysis
+- Clinical Interpretation
+- Modular Python Utilities
+- Automated Unit Testing
+
+The repository is structured to encourage reusable, maintainable, and production-quality analytical code.
+
+---
+
+# 📊 Dataset
+
+| Property | Description |
+|-----------|-------------|
+| Dataset | Diabetes 130-US Hospitals |
+| Source | UCI Machine Learning Repository |
+| Domain | Healthcare Analytics |
+| Records | 100,000+ Patient Encounters |
+| Features | 50+ Clinical Variables |
+| Objective | Analyze hospital readmission patterns |
+
+The dataset contains demographic, diagnostic, medication, laboratory, and healthcare utilization information collected from diabetic patient encounters across multiple hospitals.
+
+---
+
+# 📁 Repository Structure
 
 ```text
 clinical-readmission-analytics/
 
-├── notebooks/
-│   ├── 01_data_acquisition.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_exploratory_analysis.ipynb
-│   ├── 04_statistical_analysis.ipynb
-│   └── 05_clinical_insights.ipynb
 │
-├── data/
-│   └── cleaned_diabetes_readmission.csv
+├── 📓 notebooks/
+│     Exploratory analysis notebooks
 │
-├── reports/
-│   └── summary_report.md
+├── 📂 src/
+│     ├── data_utils.py
+│     ├── plotting_utils.py
+│     └── stats_utils.py
+│
+├── 📊 reports/
+│     └── figures/
+│
+├── 🧪 tests/
+│     Unit tests using Pytest
 │
 ├── requirements.txt
+│
 └── README.md
 ```
 
 ---
 
-## Analysis Highlights
+# 🔄 Project Workflow
 
-### Data Acquisition
-
-* Retrieved healthcare dataset directly from UCI
-* Examined metadata and feature descriptions
-* Assessed dataset dimensions and structure
-
-### Data Cleaning
-
-* Evaluated duplicate records
-* Investigated missing values
-* Removed low-information variables
-* Handled clinically meaningful missingness
-
-### Exploratory Data Analysis
-
-Explored:
-
-* Readmission outcomes
-* Demographic distributions
-* Length of stay
-* Medication burden
-* Prior healthcare utilization
-* Laboratory measurements
-
-### Statistical Analysis
-
-Applied:
-
-* Mann-Whitney U Tests
-* Chi-Square Tests
-* Group comparisons
-* Significance testing
-
-### Clinical Interpretation
-
-Translated statistical findings into healthcare-focused insights and recommendations.
+```text
+UCI Healthcare Dataset
+          │
+          ▼
+Data Acquisition
+          │
+          ▼
+Data Cleaning
+          │
+          ▼
+Feature Exploration
+          │
+          ▼
+Data Visualization
+          │
+          ▼
+Statistical Testing
+          │
+          ▼
+Clinical Interpretation
+```
 
 ---
 
-## Key Findings
+# 🔬 Analysis Highlights
 
-### Healthcare Utilization
+## 📥 Data Acquisition
 
-Patients with higher prior inpatient utilization demonstrated different readmission patterns, suggesting previous healthcare utilization may be an important indicator of future readmission risk.
-
-### Length of Stay
-
-Hospital stay duration showed meaningful differences between readmission groups, potentially reflecting differences in patient complexity and illness severity.
-
-### Medication Burden
-
-Patients receiving larger numbers of medications may represent more clinically complex cases and demonstrated distinct utilization patterns.
-
-### Laboratory Testing
-
-A substantial proportion of laboratory measurements were not performed, highlighting the importance of understanding healthcare data missingness within its clinical context.
+- Retrieved healthcare dataset directly from the UCI Machine Learning Repository
+- Examined dataset metadata
+- Reviewed feature descriptions
+- Evaluated dataset dimensions and structure
 
 ---
 
-## Technologies Used
+## 🧹 Data Cleaning
 
-### Data Processing
+Performed comprehensive preprocessing including:
 
-* Python
-* Pandas
-* NumPy
-
-### Data Visualization
-
-* Matplotlib
-* Seaborn
-* Plotly
-* Missingno
-
-### Statistical Analysis
-
-* SciPy
-* Statsmodels
-
-### Data Access
-
-* ucimlrepo
+- Duplicate record detection
+- Missing value assessment
+- Removal of low-information features
+- Data quality validation
+- Clinical interpretation of missingness
 
 ---
 
-## Clinical Relevance
+## 📈 Exploratory Data Analysis
 
-This project demonstrates an end-to-end healthcare analytics workflow and highlights how clinical, demographic, and utilization-related variables can be investigated to better understand hospital readmission patterns.
+Explored multiple aspects of patient care including:
 
-The analysis emphasizes the importance of:
-
-* Data quality assessment
-* Healthcare utilization metrics
-* Statistical validation
-* Clinical interpretation
-
-when working with real-world healthcare datasets.
-
----
-
-## Future Work
-
-Potential future extensions include:
-
-* Readmission risk prediction models
-* Logistic Regression
-* Random Forest Classification
-* Explainable AI (XAI)
-* Clinical Risk Scoring Systems
-* Interactive Healthcare Dashboards
+- Readmission outcomes
+- Patient demographics
+- Length of hospital stay
+- Medication burden
+- Prior inpatient utilization
+- Emergency visits
+- Laboratory procedures
+- Diagnostic distributions
 
 ---
 
-## Author
+## 📊 Statistical Analysis
 
-**Angelina Moses**
+Applied appropriate statistical methods including:
+
+- Mann–Whitney U Test
+- Chi-Square Test of Independence
+- Distribution comparisons
+- Statistical significance testing
+- Healthcare variable comparisons
+
+---
+
+## 🩺 Clinical Interpretation
+
+Statistical findings were translated into clinically meaningful observations to better understand potential drivers of hospital readmission.
+
+---
+
+# 📌 Key Findings
+
+## 🏥 Healthcare Utilization
+
+Patients with greater prior inpatient utilization demonstrated different readmission patterns, suggesting previous healthcare utilization may serve as an important indicator of future readmission risk.
+
+---
+
+## ⏳ Length of Stay
+
+Hospital stay duration differed between readmission groups, potentially reflecting greater illness severity and clinical complexity.
+
+---
+
+## 💊 Medication Burden
+
+Patients prescribed larger numbers of medications generally represented more clinically complex cases and demonstrated distinct healthcare utilization patterns.
+
+---
+
+## 🧪 Laboratory Testing
+
+A substantial proportion of laboratory measurements were not performed, emphasizing the importance of interpreting missing healthcare data within its clinical context rather than assuming data quality issues.
+
+---
+
+# 📷 Visualizations
+
+The project includes multiple healthcare-focused visualizations such as:
+
+- Readmission Distribution
+- Missing Value Analysis
+- Age Distribution
+- Length of Stay Analysis
+- Medication Distribution
+- Correlation Heatmaps
+- Laboratory Utilization
+- Healthcare Utilization Metrics
+
+> Figures generated throughout the analysis can be found in the `reports/figures/` directory.
+
+---
+
+# ⚙️ Technologies Used
+
+## Programming
+
+- Python
+
+## Data Analysis
+
+- Pandas
+- NumPy
+
+## Visualization
+
+- Matplotlib
+- Seaborn
+- Plotly
+- Missingno
+
+## Statistical Analysis
+
+- SciPy
+- Statsmodels
+
+## Data Access
+
+- ucimlrepo
+
+## Testing
+
+- Pytest
+
+## Development Environment
+
+- Jupyter Notebook
+- VS Code
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Angelinamoses/clinical-readmission-analytics.git
+```
+
+Navigate into the project
+
+```bash
+cd clinical-readmission-analytics
+```
+
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate the environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🧪 Running Tests
+
+Execute all unit tests using Pytest.
+
+```bash
+python -m pytest
+```
+
+Expected output
+
+```text
+=========================
+6 passed
+=========================
+```
+
+The project currently includes unit tests covering:
+
+- Missing value utilities
+- Duplicate detection
+- Readmission distribution
+- Low variance feature detection
+- Additional data utility functions
+
+---
+
+# 💻 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| 🐍 Python | Core Programming |
+| 🐼 Pandas | Data Manipulation |
+| 🔢 NumPy | Numerical Computing |
+| 📈 Matplotlib | Data Visualization |
+| 🎨 Seaborn | Statistical Graphics |
+| 📊 Plotly | Interactive Visualizations |
+| 📉 SciPy | Statistical Analysis |
+| 🧪 Pytest | Automated Testing |
+| 📒 Jupyter Notebook | Exploratory Analysis |
+
+---
+
+# 🏥 Clinical Relevance
+
+This repository demonstrates a reproducible healthcare analytics workflow commonly encountered in clinical data science and health informatics.
+
+The project emphasizes:
+
+- Clinical data quality assessment
+- Exploratory healthcare analytics
+- Statistical validation
+- Healthcare utilization analysis
+- Reproducible Python workflows
+- Modular software design
+- Automated testing
+- Clinically meaningful interpretation of analytical findings
+
+---
+
+# 🛣️ Future Improvements
+
+Planned extensions include:
+
+- [x] Data Cleaning
+- [x] Exploratory Data Analysis
+- [x] Statistical Analysis
+- [x] Modular Utility Functions
+- [x] Automated Unit Testing
+- [ ] Logistic Regression Model
+- [ ] Random Forest Classifier
+- [ ] XGBoost
+- [ ] Explainable AI (SHAP)
+- [ ] Interactive Dashboard
+- [ ] Streamlit Deployment
+- [ ] GitHub Actions CI/CD
+- [ ] Docker Containerization
+
+---
+
+# 👩‍💻 Author
+
+## Angelina Moses
+
+**M.Sc. Health Informatics**
+
+Aspiring Clinical Machine Learning Engineer
+
+GitHub
+
+https://github.com/Angelinamoses
+
+LinkedIn
+
+https://linkedin.com/in/angelinamoses
+
+---
+
+<div align="center">
+
+⭐ If you found this project interesting, consider giving it a star!
+
+</div>
